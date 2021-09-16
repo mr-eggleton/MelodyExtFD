@@ -5,6 +5,7 @@ def bubble_sort(items, swaps=True): #This defines the section of the code that d
     swapped = True
     output = []
     output += items
+    
 
     while swapped:
         swapped = False
@@ -21,9 +22,12 @@ def bubble_sort(items, swaps=True): #This defines the section of the code that d
                 changes += 1
                 swapped = True
                 last = j
+        if changes == 0:
+            print("data presorted")
     return output
-    if changes == 0:
-        print("data presorted")
+                
+
+
 
 def main():
     print("Stretch_Beatz Bubble Sort Algorithm")
