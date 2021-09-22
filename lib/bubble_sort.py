@@ -37,9 +37,9 @@ def bubble_sort(self, swaps=True): #This defines the section of the code that do
                 
 def main():
     print("Stretch_Beatz Bubble Sort Algorithm")
-    assert P[50,25,5,20,10].bubble_sort() == [], "Test 1"
-    assert P[50,25,5,20,10].bubble_sort(swaps=False) == [], "Test 2"
-    assert P[5,5,5,5,5].bubble_sort(swaps=False) == [5,5,5,5,5], "Test 3"
+    assert P[50,25,5,20,10].bubble_sort() == P[50, 25, 5, 20, 10, 50, 25, 5, 20, 10, 25, 50, 5, 20, 10, 25, 5, 50, 20, 10, 25, 5, 20, 50, 10, 25, 5, 20, 10, 50, 25, 5, 20, 10, 50, 5, 25, 20, 10, 50, 5, 20, 25, 10, 50, 5, 20, 10, 25, 50, 5, 20, 10, 25, 50, 5, 10, 20, 25, 50, 5, 10, 20, 25, 50], "Test 1"
+    assert P[50,25,5,20,10].bubble_sort(swaps=False) == P[50, 25, 5, 20, 10, 25, 5, 20, 10, 50, 5, 20, 10, 25, 50, 5, 10, 20, 25, 50, 5, 10, 20, 25, 50], "Test 2"
+    assert P[5,5,5,5,5].bubble_sort(swaps=False) == P[5,5,5,5,5], "Test 3 "+str(P[5,5,5,5,5].bubble_sort(swaps=False))
 
 if __name__ == "__main__":
     main()
