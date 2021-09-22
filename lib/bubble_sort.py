@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-from FoxDot.lib.Patterns.Main import PatternMethod
+from FoxDot import *
 
 @PatternMethod
 def bubble_sort(self, swaps=True): #This defines the section of the code that does the 
@@ -9,7 +9,6 @@ def bubble_sort(self, swaps=True): #This defines the section of the code that do
     swapped = True
     output = []
     output += items
-    
 
     while swapped:
         swapped = False
@@ -34,17 +33,13 @@ def bubble_sort(self, swaps=True): #This defines the section of the code that do
             print("data presorted")
 
     print(output)
-
     return self.__class__(output)
                 
-
-
-
 def main():
     print("Stretch_Beatz Bubble Sort Algorithm")
-    print ("Test 1",  bubble_sort([50,25,5,20,10]))
-    print ("Test 2", bubble_sort([50,25,5,20,10], swaps=False))
-    print ("Test 3", bubble_sort([5,5,5,5,5], swaps=False))
+    assert P[50,25,5,20,10].bubble_sort() == [], "Test 1"
+    assert P[50,25,5,20,10].bubble_sort(swaps=False) == [], "Test 2"
+    assert P[5,5,5,5,5].bubble_sort(swaps=False) == [5,5,5,5,5], "Test 3"
 
 if __name__ == "__main__":
     main()
